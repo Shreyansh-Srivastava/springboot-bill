@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/styles.css">
+    <script type="text/javascript" src="js/myscripts.js"></script>
+    <title>Electricity Bill</title>
+</head>
+<body>
+<h1 align=center>Electricity Bill Calculator</h1>
+<form id="formid" align="center">
+    <div>
+        <label for="inp1">Enter electricity units for quarter 1: </label>
+        <input id="inp1" name="inp1" type="number" required>
+    </div>
+    <br>
+    <div>
+        <label for="inp2">Enter electricity units for quarter 2: </label>
+        <input id="inp2" type="number" name="inp2" required>
+    </div>
+    <br>
+    <div>
+        <label for="inp3">Enter electricity units for quarter 3: </label>
+        <input id="inp3" type="number" name="inp3" required>
+    </div>
+    <br>
+    <div>
+        <label for="inp4">Enter electricity units for quarter 4: </label>
+        <input id="inp4" type="number" name="inp4" required>
+    </div>
+    <br>
+    <div>
+        <input type="submit" value="Submit">&nbsp;&nbsp;
+        <input type="button" value="Show Bill Details" onclick="bill()">&nbsp;&nbsp;
+        <input type="reset" value="Reset">
+    </div>
+    <br>
+    <div>
+        <label for="outp">Bill Summary: </label><br>
+        <textarea id="outp" type="text" name="outp"></textarea>
+    </div>
+    <br>
+    <div>
+        <label for="outp1">Total units consumed: </label>
+        <input id="outp1" type="text" name="outp1">
+        &nbsp;&nbsp;&nbsp;
+        <label for="outp2">Total bill: </label>
+        <input id="outp2" type="text" name="outp2">
+    </div>
+</form>
+</body>
+</html>
+
+//src/main/resources/templates

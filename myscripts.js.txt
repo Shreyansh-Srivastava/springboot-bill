@@ -1,0 +1,35 @@
+function bill(){
+    let a = document.getElementById("inp1").value;
+    let b = document.getElementById("inp2").value;
+    let c = document.getElementById("inp3").value;
+    let d = document.getElementById("inp4").value;
+    let t = parseInt(a)+parseInt(b)+parseInt(c)+parseInt(d);
+    let bill = 0;
+    if(t<=50){
+        bill = t * 3.5;
+        document.getElementById("outp").value="Total units consumed = "+a+" + "+b+" + "+c+" + "+d+" = "+t.toString()+"units\nIt is less than or equal to 50 units\nTotal cost for "+t.toString()+" units = "+t.toString()+" * 3.5 = Rs. "+bill.toString();
+    }
+    else if(t<=150){
+        let r= t-50;
+        let c1= r*4;
+        bill = 175+c1;
+        document.getElementById("outp").value="Total units consumed = "+a+" + "+b+" + "+c+" + "+d+" = "+t.toString()+" units\nIt is less than or equal to 150 units\nCost for first 50 units = 50*3.5 = Rs. 175\nCost for remaining "+r.toString()+" units = "+r.toString()+" * 4 = Rs. "+c1.toString()+"\nTotal cost for"+t.toString()+"units = 175 +"+c1.toString()+"= Rs."+bill.toString();
+    }
+    else if(t<=250){
+        let r2= t-150;
+        let c2= r2*5.2;
+        bill = 175+400+c2;
+        document.getElementById("outp").value="Total units consumed = "+a+" + "+b+" + "+c+" + "+d+" = "+t.toString()+" units\nIt is less than or equal to 250 units\nCost for first 50 units = 50*3.5 = Rs. 175\nCost for next 100 units = 100*4 = Rs. 400\nCost for remaining "+r2.toString()+" units = "+r2.toString()+" * 5.2 = Rs. "+c2.toString()+"\nTotal cost for "+t.toString()+" units = 175 + 400 + "+c2.toString()+" = Rs. "+bill.toString();
+    }
+    else{
+        let r3= t-250;
+        let c3= r3*6.5;
+        bill = 175+400+520+c3;
+        document.getElementById("outp").value="Total units consumed = "+a+" + "+b+" + "+c+" + "+d+" = "+t.toString()+" units\nIt is more than 250 units\nCost for first 50 units = 50*3.5 = Rs. 175\nCost for next 100 units = 100*4 = Rs. 400\nCost for next 100 units = 100*5.2 = Rs. 520\nCost for remaining "+r3.toString()+" units = "+r3.toString()+" * 6.5 = Rs. "+c3.toString()+"\nTotal cost for "+t.toString()+" units = 175 + 400 + 520 + "+c3.toString()+" = Rs. "+bill.toString();
+    }
+    document.getElementById("outp1").value=t;
+    document.getElementById("outp2").value=bill;
+}
+
+
+//src/main/resources/static/js(create js folder)
